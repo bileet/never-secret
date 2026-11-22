@@ -1,0 +1,5 @@
+{
+  "name": "never-secret",
+  "version": "1.0.0",
+  "description": "Redacts secret values from every tool result before the model sees them"
+}

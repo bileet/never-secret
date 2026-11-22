@@ -1,0 +1,14 @@
+{
+  "name": "never-secret",
+  "interface": {
+    "displayName": "never-secret"
+  },
+  "plugins": [
+    {
+      "name": "never-secret",
+      "source": { "source": "url", "url": "./" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Security"
+    }
+  ]
+}

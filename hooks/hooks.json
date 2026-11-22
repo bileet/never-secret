@@ -1,0 +1,17 @@
+{
+  "description": "Gemini CLI hook (Gemini only reads hooks/hooks.json). Claude Code's hook is inline in .claude-plugin/plugin.json, Codex's is hooks/codex-hooks.json.",
+  "hooks": {
+    "AfterTool": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"${extensionPath}/hooks/run.sh\" --gemini",
+            "timeout": 60000
+          }
+        ]
+      }
+    ]
+  }
+}

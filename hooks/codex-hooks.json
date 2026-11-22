@@ -1,0 +1,17 @@
+{
+  "description": "Redact secrets from every tool result",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run.sh\" --codex",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}

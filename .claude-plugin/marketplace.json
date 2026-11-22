@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "never-secret",
+  "description": "Redacts secret values from every tool result before Claude sees them",
+  "owner": {
+    "name": "bileet"
+  },
+  "plugins": [
+    {
+      "name": "never-secret",
+      "source": "./",
+      "description": "Redacts secret values from every tool result before Claude sees them",
+      "author": {
+        "name": "bileet"
+      },
+      "category": "security",
+      "homepage": "https://github.com/bileet/never-secret"
+    }
+  ]
+}

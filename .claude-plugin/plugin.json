@@ -1,0 +1,32 @@
+{
+  "name": "never-secret",
+  "version": "1.0.0",
+  "description": "Redacts secret values from every tool result before Claude sees them",
+  "author": {
+    "name": "bileet",
+    "url": "https://github.com/bileet"
+  },
+  "homepage": "https://github.com/bileet/never-secret",
+  "repository": "https://github.com/bileet/never-secret",
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "secrets",
+    "redaction",
+    "hooks"
+  ],
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"${CLAUDE_PLUGIN_ROOT}/hooks/run.sh\"",
+            "timeout": 60
+          }
+        ]
+      }
+    ]
+  }
+}
